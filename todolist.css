@@ -1,11 +1,12 @@
 :root {
-    --bg-dark: #1e1e1e;      
-    --container-bg: #2d2d2d;  
-    --primary-color: #64ffda; 
-    --secondary-color: #ff6e6e; 
-    --text-light: #f0f0f0;   
-    --border-dark: #444;     
-    --shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    --bg-dark: #1e1e1e;       /* Deep Charcoal Background */
+    --container-bg: #2d2d2d;  /* Slightly Lighter Container Background */
+    --primary-color: #64ffda; /* Aqua/Cyan Accent for Success/Primary Action */
+    --secondary-color: #ff6e6e; /* Soft Red for Delete */
+    --text-light: #f0f0f0;    /* Light Text */
+    --border-dark: #444;      /* Dark Border/Divider */
+    --shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Stronger Shadow for depth */
+}
 
 * {
     box-sizing: border-box;
@@ -21,29 +22,29 @@ body {
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
-    padding: 40px 20px; 
+    padding: 40px 20px;
 }
 
-
+/* -------------------- Container and Header -------------------- */
 .container {
     background: var(--container-bg);
     padding: 30px;
-    border-radius: 15px; 
+    border-radius: 15px;
     box-shadow: var(--shadow);
     width: 100%;
-    max-width: 650px; 
+    max-width: 650px;
 }
 
 h1 {
     text-align: center;
     margin-bottom: 30px;
-    color: var(--primary-color); 
+    color: var(--primary-color);
     font-weight: 600;
-    border-bottom: 2px solid var(--border-dark); 
+    border-bottom: 2px solid var(--border-dark);
     padding-bottom: 10px;
 }
 
-
+/* -------------------- Input Group -------------------- */
 .input-group {
     display: flex;
     margin-bottom: 30px;
@@ -56,7 +57,7 @@ h1 {
     border: 1px solid var(--border-dark);
     border-radius: 10px;
     font-size: 16px;
-    background-color: #3a3a3a; 
+    background-color: #3a3a3a;
     color: var(--text-light);
     transition: border-color 0.3s, box-shadow 0.3s;
 }
@@ -73,7 +74,7 @@ h1 {
 
 .input-group button {
     background-color: var(--primary-color);
-    color: #1e1e1e; 
+    color: #1e1e1e;
     border: none;
     padding: 15px 25px;
     border-radius: 10px;
@@ -84,7 +85,7 @@ h1 {
 }
 
 .input-group button:hover {
-    background-color: #79ffeb; 
+    background-color: #79ffeb;
     box-shadow: 0 0 10px rgba(100, 255, 218, 0.6);
 }
 
@@ -92,7 +93,7 @@ h1 {
     transform: scale(0.95);
 }
 
-
+/* -------------------- List Styles -------------------- */
 ul {
     list-style-type: none;
     padding: 0;
@@ -104,7 +105,7 @@ li {
     align-items: center;
     padding: 18px 20px;
     margin-bottom: 12px;
-    background-color: #3a3a3a; 
+    background-color: #3a3a3a;
     border-radius: 10px;
     border-left: 6px solid var(--border-dark);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -112,9 +113,8 @@ li {
 }
 
 li:hover {
-    background-color: #444; 
+    background-color: #444;
 }
-
 
 li .task-text {
     flex-grow: 1;
@@ -123,10 +123,10 @@ li .task-text {
     font-size: 17px;
 }
 
-
+/* Completed Class Styles */
 .completed {
-    opacity: 0.7; 
-    border-left-color: var(--primary-color); 
+    opacity: 0.7;
+    border-left-color: var(--primary-color);
     background-color: #333;
 }
 
@@ -136,7 +136,7 @@ li .task-text {
     font-style: italic;
 }
 
-
+/* -------------------- Action Buttons -------------------- */
 .task-buttons {
     display: flex;
     gap: 10px;
@@ -162,15 +162,15 @@ li .task-text {
 }
 
 .task-buttons .delete-btn {
-    background-color: var(--secondary-color); 
+    background-color: var(--secondary-color);
     color: var(--bg-dark);
 }
 
 .task-buttons .delete-btn:hover {
-    background-color: #ff8c8c; 
+    background-color: #ff8c8c;
 }
 
-
+/* -------------------- Enhanced Responsive Design (Mobile) -------------------- */
 @media (max-width: 680px) {
     .container {
         padding: 20px;
@@ -179,12 +179,12 @@ li .task-text {
     
     .input-group {
         flex-direction: column;
-        gap: 10px; 
+        gap: 10px;
     }
 
     .input-group button, #taskinput {
         width: 100%;
-        padding: 12px 15px; 
+        padding: 12px 15px;
     }
 }
 
@@ -203,11 +203,10 @@ li .task-text {
 
     .task-buttons {
         width: 100%;
-        justify-content: space-between; 
+        justify-content: space-between;
     }
     
     .task-buttons button {
-        flex-grow: 1; 
+        flex-grow: 1;
     }
-}
 }
